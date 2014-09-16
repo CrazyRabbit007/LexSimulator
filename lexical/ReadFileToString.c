@@ -18,7 +18,8 @@ char* ReadFileToString(char* filename){
 	index = fileString;
 	while (!feof(fp))
 		*(index++) = fgetc(fp);
-	*(index) = EOF;
+	index--;
+	*(index) = '\0';
 	index = fileString;
 	
 	fclose(fp);
@@ -28,7 +29,7 @@ char* ReadFileToString(char* filename){
 void ShowFileString(char* fileString){
 	char *index;
 	index = fileString;
-	while ((*index) != EOF)
+	while ((*index) != '\0')
 	{
 		printf("%c", *index);
 		index++;

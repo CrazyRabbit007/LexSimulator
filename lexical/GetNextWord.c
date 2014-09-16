@@ -7,13 +7,13 @@ void GetNext(char* fileString, int* pos, char* nextWord){
 		(*pos)++;
 	}
 	while (*index != ' ' && *index != '\n'){
-		if (*index==EOF){
+		if (*index=='\0'){
 			break;
 		}
 		*(nextWord++) = *(index++);
 		(*pos)++;
 	}
-	*(nextWord) = EOF;
+	*(nextWord) = '\0';
 }
 
 bool GetNextWord(char* fileString, int* pos, char* nextWord){
@@ -22,7 +22,7 @@ bool GetNextWord(char* fileString, int* pos, char* nextWord){
 		return false;
 	}
 	GetNext(fileString, pos, nextWord);
-	if (*nextWord == EOF){
+	if (*nextWord == '\0'){
 		return false;
 	}
 	return true;

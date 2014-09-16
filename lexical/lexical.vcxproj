@@ -68,6 +68,7 @@
     <ClCompile Include="AnalysisListCreate.c" />
     <ClCompile Include="AnalysisNode.c" />
     <ClCompile Include="AnalysisTreeCreate.c" />
+    <ClCompile Include="ContentAnalysis.c" />
     <ClCompile Include="GetNextWord.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="ReadFileToString.c" />
@@ -78,6 +79,7 @@
     <ClInclude Include="AnalysisListCreate.h" />
     <ClInclude Include="AnalysisNode.h" />
     <ClInclude Include="AnalysisTreeCreate.h" />
+    <ClInclude Include="ContentAnalysis.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="GetNextWord.h" />
     <ClInclude Include="ReadFileToString.h" />

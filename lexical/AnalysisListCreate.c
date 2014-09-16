@@ -29,7 +29,7 @@ AnalysisNodePtr AnalysisListCreate(char* lexString){
 
 bool LexStringSplit(char* lexString, int* pos, char* lexicalDeclare, char* lexicalDef){
 	char* index = lexString + *pos;
-	if (*index == EOF){
+	if (*index == '\0'){
 		return false;
 	}
 	while (*index == ' '){
@@ -49,14 +49,14 @@ bool LexStringSplit(char* lexString, int* pos, char* lexicalDeclare, char* lexic
 		index++;
 		(*pos)++;
 	}
-	while (*index!='\n'&&*index!=EOF){
+	while (*index!='\n'&&*index!='\0'){
 		*lexicalDef = *index;
 		lexicalDef++;
 		index++;
 		(*pos)++;
 	}
 	*lexicalDef = '\0';
-	if (*index == EOF){
+	if (*index == '\0'){
 		return true;
 	}
 	while (*index == ' '){

@@ -27,3 +27,9 @@
 
 //词法定义最大长度
 #define MAXLEXDEFLEN 1000
+
+//属性名最大长度
+#define MAXPROPNAMELEN 100
+
+//属性值最大长度
+#define MAXPROPVALUELEN 100

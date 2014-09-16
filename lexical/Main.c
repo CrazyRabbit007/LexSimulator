@@ -4,6 +4,7 @@
 #include"ReadFileToString.h"
 #include"GetNextWord.h"
 #include"AnalysisListCreate.h"
+#include"ContentAnalysis.h"
 
 void main(){
 	char *progFileName = PROGRAMFILENAME;
@@ -12,7 +13,8 @@ void main(){
 	char *lexString;
 	int pos = 0;
 	char* nextWord = (char*)malloc(sizeof(char)*MAXKEYWORDLEN);
-	char* nextWordIndex = nextWord;
+	char* propertyName = (char*)malloc(sizeof(char)*MAXPROPNAMELEN);
+	char* propertyValue = (char*)malloc(sizeof(char)*MAXPROPVALUELEN);
 	
 	progFileString = ReadFileToString(progFileName);
 	ShowFileString(progFileString);
@@ -24,12 +26,9 @@ void main(){
 	ShowListDetail();
 	
 	while (GetNextWord(progFileString, &pos, nextWord) == true){
-		//regular translate,out;
-		nextWordIndex = nextWord;
-		while (*nextWordIndex != EOF){
-			printf("%c", *nextWordIndex);
-			nextWordIndex++;
-		}
+		ContentAnalysis(AnalysisNodeBegin, nextWord, propertyName, propertyValue);
+		printf("%s:",propertyName);
+		printf(propertyValue);
 		printf("\n");
 	}
 	getchar();

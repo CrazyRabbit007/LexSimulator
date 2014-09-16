@@ -22,6 +22,9 @@
     <Filter Include="资源文件\tools">
       <UniqueIdentifier>{57302f5a-c444-43f7-ace1-e012c15e4dc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="资源文件\ContentAnalysis">
+      <UniqueIdentifier>{49785584-6fd6-4607-baf7-7dc691f117c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.c">
@@ -48,6 +51,9 @@
     <ClCompile Include="StringMethod.c">
       <Filter>资源文件\tools</Filter>
     </ClCompile>
+    <ClCompile Include="ContentAnalysis.c">
+      <Filter>资源文件\ContentAnalysis</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defines.h">
@@ -73,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="StringMethod.h">
       <Filter>资源文件\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentAnalysis.h">
+      <Filter>资源文件\ContentAnalysis</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
